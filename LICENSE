@@ -15,4 +15,5 @@ licenses. They are not included in runtime map packages. See tools/toolchain.jso
 
 Exception: tools/patches/embree-deterministic-device.patch is licensed
 GPL-3.0-or-later as marked. It modifies the separately licensed compiler and is
-not included in the runtime map ZIP. The original maps/art remain CC0-1.0.
+not included in the runtime map ZIP. A complete GPLv3 copy is provided in
+licenses/GPL-3.0.txt. The original maps/art remain CC0-1.0.
