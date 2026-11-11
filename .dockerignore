@@ -6,3 +6,6 @@
 !.cache/oneapi-tbb-2021.11.0-lin.tgz
 !.cache/googletest
 !.cache/googletest/**
+!tools
+!tools/patches
+!tools/patches/embree-deterministic-device.patch

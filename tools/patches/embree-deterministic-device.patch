@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Build-only patch to ericw-tools c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a.
+# Explicit supported Embree device policy; no BSP data is rewritten.
+--- a/light/trace_embree.cc
++++ b/light/trace_embree.cc
+@@ -657,7 +657,7 @@
+         }
+     }
+ 
+-    device = rtcNewDevice(NULL);
++    device = rtcNewDevice("max_isa=avx2,frequency_level=simd128,threads=1");
+     rtcSetDeviceErrorFunction(
+         device, ErrorCallback, nullptr); // mxd. Changed from rtcDeviceSetErrorFunction to silence compiler warning...
+ 

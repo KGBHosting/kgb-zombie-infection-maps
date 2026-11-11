@@ -56,5 +56,14 @@
       "license_sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
       "purpose": "Upstream unconditional FetchContent during configure, even when compiler tests disabled. Not shipped in runtime map ZIP."
     }
-  ]
+  ],
+  "compiler_patch": {
+    "path": "tools/patches/embree-deterministic-device.patch",
+    "sha256": "d6b85fc90fa81518e6f18a6f6f0c6040b0e7f061b45410c53c663ad54affc4ca",
+    "license": "GPL-3.0-or-later",
+    "upstream_base_commit": "c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a",
+    "embree_device_config": "max_isa=avx2,frequency_level=simd128,threads=1",
+    "official_api_reference": "https://github.com/RenderKit/embree/blob/v4.4.0/doc/src/api/rtcNewDevice.md",
+    "purpose": "Bound CPU-dependent BVH traversal policy and scene-build concurrency; disposable local probe preserved every frozen BSP byte. Native CI must independently reproduce exact hashes."
+  }
 }

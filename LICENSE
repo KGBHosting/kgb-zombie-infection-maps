@@ -12,3 +12,7 @@ Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 Third-party compiler and dependencies are separate software with their own
 licenses. They are not included in runtime map packages. See tools/toolchain.json.
+
+Exception: tools/patches/embree-deterministic-device.patch is licensed
+GPL-3.0-or-later as marked. It modifies the separately licensed compiler and is
+not included in the runtime map ZIP. The original maps/art remain CC0-1.0.

@@ -32,6 +32,12 @@ for dependency in json.loads(Path('tools/toolchain.json').read_text())['dependen
     archive=Path('.cache')/dependency['url'].rsplit('/',1)[1]
     assert hashlib.sha256(archive.read_bytes()).hexdigest()==dependency['sha256'],dependency['name']
 CHECKSUMS
+python3 - <<'PATCHCHECK'
+import hashlib,json
+from pathlib import Path
+patch=json.loads(Path('tools/toolchain.json').read_text())['compiler_patch']
+assert hashlib.sha256(Path(patch['path']).read_bytes()).hexdigest()==patch['sha256']
+PATCHCHECK
 # Upstream requires this FetchContent source even with DISABLE_TESTS=ON.
 if [ ! -d .cache/googletest/.git ]; then
   git clone --filter=blob:none --branch v1.14.0 --depth 1 https://github.com/google/googletest.git .cache/googletest
