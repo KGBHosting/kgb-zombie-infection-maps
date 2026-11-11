@@ -1,6 +1,10 @@
 # Required live development qualification
 
-The full checklist is **pending**. An initial development smoke check of courtyard download/rendering/central stairs passed on 2026-11-11; it does not qualify the other maps or 32-slot capacity/gameplay/rotation. The map builder performs no live infrastructure operations. Root owns the task's development server and real Valve Steam client. Core 0.1.3 is a separate immutable artifact.
+Component qualification on the earlier local candidate completed on 2026-11-11 under the task operator: one real Valve Steam client plus 31 explicitly labeled stationary engine fake clients; all three native round resets produced 32 alive/JOINED CTs with distinct clear hulls. All three exact local candidate downloads/rendering and declared two-approach routes were exercised, including genuine melee conversion and core-owned win/reset outcomes. This is not a 32-real-human network/performance test or balance certification.
+
+The canonical release candidate is independently source-built on documented Ubuntu24.04 CI. Courtyard/cycle are unchanged; depot and containment differ only in 18 RGB lighting bytes each, with every other lump and BSP header identical. **Their final-byte real-client download/visual/capacity/combat requalification is pending.** Prior local hashes and comparison are preserved in `evidence/canonical-build.json`; old-byte results must not be represented as final-byte results. Managed Panel install/uninstall/default-map/mapcycle lifecycle is also pending. The map builder performs no live infrastructure operations; the task operator owns the test server/client. Core 0.1.3 is a separate immutable artifact.
+
+No map-specific briefing text is supplied in 0.1.0, so a client may retain a previous stock briefing in its team menu. This is a known presentation limitation, not an external asset dependency.
 
 1. Stop the task-owned development server. Verify exact runtime, plugin and existing candidate file hashes before changing files. Preserve private backups without including names/addresses/credentials in public evidence.
 2. Install only the four allowlisted map-pack files after independent hash verification. Configure the dedicated cycle and startup courtyard through the future managed recipe. Keep existing stock `mapcycle.txt` unchanged.

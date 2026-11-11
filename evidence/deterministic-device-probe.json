@@ -19,5 +19,6 @@
       "sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0"
     }
   ],
-  "native_ci_exact_hash_qualification": "required"
+  "native_ci_exact_hash_qualification": "local and native output differ in bounded RGB lighting bytes; see canonical-build.json",
+  "scope": "historical disposable local Docker compiler probe against earlier, unpublished local candidate; not the canonical release bytes"
 }

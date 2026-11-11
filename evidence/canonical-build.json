@@ -1,0 +1,141 @@
+{
+  "candidate_source_commit": "135e10e85425cdeed69c2ea178ca65ac62e3f765",
+  "canonical_run": "https://github.com/KGBHosting/kgb-zombie-infection-maps/actions/runs/43054457124",
+  "independent_run": "https://github.com/KGBHosting/kgb-zombie-infection-maps/actions/runs/43053276758",
+  "two_output_directory_rebuilds_identical": {
+    "same_pinned_toolchain": true,
+    "results": [
+      {
+        "map": "zm_kgb_courtyard_v1",
+        "same_bytes_from_clean_output_directory": true,
+        "sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e"
+      },
+      {
+        "map": "zm_kgb_depot_v1",
+        "same_bytes_from_clean_output_directory": true,
+        "sha256": "fed1d857a6028f1c1302bc31578f4a1930d07f5768a1f1617e4c9762ac3f3780"
+      },
+      {
+        "map": "zm_kgb_containment_v1",
+        "same_bytes_from_clean_output_directory": true,
+        "sha256": "acc6b752acc5706e7c803758c1c84c6b224376146f49ec2dd0caaf0edc475988"
+      }
+    ]
+  },
+  "same_archive_across_two_ci_runs": true,
+  "manifest": {
+    "pack": "kgb-zombie-infection-maps",
+    "candidate_version": "0.1.0",
+    "license": "CC0-1.0",
+    "release_stage": "development-candidate",
+    "full_live_qualification": "pending",
+    "files": [
+      {
+        "path": "kgb_zombie_infection_mapcycle.txt",
+        "bytes": 58,
+        "sha256": "cd51e9e663aa4994826d7ccad42440b53bfb82954417dc9d244d071307ee4ff8",
+        "sha512": "5d96cf29e9404532e0d6221852ce0927e4b535fdc131c1f253cd1afe243c00fb3972a0f0159e237920319115c75d37895995608cb3c2df95ae1e1c638b558d4b"
+      },
+      {
+        "path": "maps/zm_kgb_courtyard_v1.bsp",
+        "bytes": 659496,
+        "sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e",
+        "sha512": "7276990cc92c74594ec2a817355da2d71a4f1d81d84c3ecf16c9bdee2ac193fb6652524e705d11064d45dfec7097c28f772517154709f4bb8f371d47b8663943"
+      },
+      {
+        "path": "maps/zm_kgb_depot_v1.bsp",
+        "bytes": 689944,
+        "sha256": "fed1d857a6028f1c1302bc31578f4a1930d07f5768a1f1617e4c9762ac3f3780",
+        "sha512": "702cabfeee25245d1b16758bf326a94403b15934adc3486d6bc5016bac2a12917724459d9e3fbeb4c50956624b71abee26354735b8f82716ed52bf9eaee7df45"
+      },
+      {
+        "path": "maps/zm_kgb_containment_v1.bsp",
+        "bytes": 653312,
+        "sha256": "acc6b752acc5706e7c803758c1c84c6b224376146f49ec2dd0caaf0edc475988",
+        "sha512": "d1cee25fbee1fbb74cc3686996e4a26d6a82c4199d7b5e0d1edb2f3374bfae351fd9c2891c7cdd4d34e21a435db91729b616eb880325d3ec57e2ae7045e85cc6"
+      }
+    ],
+    "archive": {
+      "path": "kgb-zombie-infection-maps-0.1.0.zip",
+      "bytes": 371184,
+      "sha256": "55ad893d63c4c4257f8c8833e40ed00a2150e76b3718753f9f0dec00f69181ba",
+      "sha512": "fd38e4d2a9ea0b70759536b0fe57d68ad813e16f4186109f64815ec27ef5dec7c8a576e4ff421f04d575ebcb0cc3d825ed03140366503cb299e8fab9883c03e7"
+    }
+  },
+  "toolchain": {
+    "route": "source-build-on-hosted-ubuntu24.04",
+    "compiler_source_commit": "c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a",
+    "network_namespace_for_configure_build_and_map_compile": true,
+    "compiler_patch_sha256": "d6b85fc90fa81518e6f18a6f6f0c6040b0e7f061b45410c53c663ad54affc4ca",
+    "embree_device_config": "max_isa=avx2,frequency_level=simd128,threads=1",
+    "tools": {
+      "cmake": "cmake version 3.31.6",
+      "ninja": "1.13.2",
+      "c++": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "binaries": {
+      "qbsp": {
+        "bytes": 1715256,
+        "sha256": "94ecf30b3f117137cd84816a042c9fbad82d920e066c70ed56bfd9e2f81aad64"
+      },
+      "vis": {
+        "bytes": 822824,
+        "sha256": "607fa9915d5ccbe34011fba60e187fddf75589baa44ccd98ffc738dc573b1052"
+      },
+      "light": {
+        "bytes": 1559984,
+        "sha256": "fcf945df98fea7a1aaaa4c499a6b7a7f9129e06bce58f7522911b36b312faf29"
+      },
+      "bsputil": {
+        "bytes": 1198480,
+        "sha256": "7b5c6589fc89b2bbee6d57dd5fe9b2eb5c1027d5e2ff8cc19aa4aefc2d161085"
+      }
+    },
+    "cpu_feature_bools": {
+      "sse2": true,
+      "sse4_2": true,
+      "avx": true,
+      "avx2": true,
+      "avx512f": false,
+      "fma": true
+    }
+  },
+  "comparison_to_previous_local_candidate": [
+    {
+      "map": "zm_kgb_containment_v1.bsp",
+      "header_identical": true,
+      "length_identical": true,
+      "changed_lumps": [
+        8
+      ],
+      "changed_bytes": 18,
+      "max_channel_delta": 7,
+      "all_differences_within_rgb_lighting": true,
+      "fourteen_non_lighting_lumps_identical": true
+    },
+    {
+      "map": "zm_kgb_courtyard_v1.bsp",
+      "header_identical": true,
+      "length_identical": true,
+      "changed_lumps": [],
+      "changed_bytes": 0,
+      "max_channel_delta": 0,
+      "all_differences_within_rgb_lighting": true,
+      "fourteen_non_lighting_lumps_identical": true
+    },
+    {
+      "map": "zm_kgb_depot_v1.bsp",
+      "header_identical": true,
+      "length_identical": true,
+      "changed_lumps": [
+        8
+      ],
+      "changed_bytes": 18,
+      "max_channel_delta": 17,
+      "all_differences_within_rgb_lighting": true,
+      "fourteen_non_lighting_lumps_identical": true
+    }
+  ],
+  "status": "canonical candidate approved for final-byte live requalification; publication held",
+  "cross_cpu_bitwise_reproducibility": false
+}

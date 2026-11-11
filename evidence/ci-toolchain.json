@@ -1,0 +1,38 @@
+{
+  "route": "source-build-on-hosted-ubuntu24.04",
+  "compiler_source_commit": "c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a",
+  "network_namespace_for_configure_build_and_map_compile": true,
+  "compiler_patch_sha256": "d6b85fc90fa81518e6f18a6f6f0c6040b0e7f061b45410c53c663ad54affc4ca",
+  "embree_device_config": "max_isa=avx2,frequency_level=simd128,threads=1",
+  "tools": {
+    "cmake": "cmake version 3.31.6",
+    "ninja": "1.13.2",
+    "c++": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  "binaries": {
+    "qbsp": {
+      "bytes": 1715256,
+      "sha256": "94ecf30b3f117137cd84816a042c9fbad82d920e066c70ed56bfd9e2f81aad64"
+    },
+    "vis": {
+      "bytes": 822824,
+      "sha256": "607fa9915d5ccbe34011fba60e187fddf75589baa44ccd98ffc738dc573b1052"
+    },
+    "light": {
+      "bytes": 1559984,
+      "sha256": "fcf945df98fea7a1aaaa4c499a6b7a7f9129e06bce58f7522911b36b312faf29"
+    },
+    "bsputil": {
+      "bytes": 1198480,
+      "sha256": "7b5c6589fc89b2bbee6d57dd5fe9b2eb5c1027d5e2ff8cc19aa4aefc2d161085"
+    }
+  },
+  "cpu_feature_bools": {
+    "sse2": true,
+    "sse4_2": true,
+    "avx": true,
+    "avx2": true,
+    "avx512f": false,
+    "fma": true
+  }
+}

@@ -2,6 +2,8 @@
   "pack": "kgb-zombie-infection-maps",
   "candidate_version": "0.1.0",
   "license": "CC0-1.0",
+  "release_stage": "development-candidate",
+  "full_live_qualification": "pending",
   "files": [
     {
       "path": "kgb_zombie_infection_mapcycle.txt",
@@ -18,22 +20,20 @@
     {
       "path": "maps/zm_kgb_depot_v1.bsp",
       "bytes": 689944,
-      "sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0",
-      "sha512": "f98aea4a16b3cae951a79f34aa170d5816a8ac5265e0fec5f282d2b631220482d0a942903b38d78dc36b4a6d7b05fd550064cecfb886f42016cecbfda12bd686"
+      "sha256": "fed1d857a6028f1c1302bc31578f4a1930d07f5768a1f1617e4c9762ac3f3780",
+      "sha512": "702cabfeee25245d1b16758bf326a94403b15934adc3486d6bc5016bac2a12917724459d9e3fbeb4c50956624b71abee26354735b8f82716ed52bf9eaee7df45"
     },
     {
       "path": "maps/zm_kgb_containment_v1.bsp",
       "bytes": 653312,
-      "sha256": "ef7003bf071e785618d5c3d835fbe7d9d4657a8b5a5071b49cc9df68c9a68322",
-      "sha512": "b8e2b01726c61728d1014bd9cbff32b3f2ff7e2ae49a8c0ca927312d2f4c3c102739c9c559c45e7032525c0352a0a8f85728825322e50f53083c7694c9bcc051"
+      "sha256": "acc6b752acc5706e7c803758c1c84c6b224376146f49ec2dd0caaf0edc475988",
+      "sha512": "d1cee25fbee1fbb74cc3686996e4a26d6a82c4199d7b5e0d1edb2f3374bfae351fd9c2891c7cdd4d34e21a435db91729b616eb880325d3ec57e2ae7045e85cc6"
     }
   ],
   "archive": {
     "path": "kgb-zombie-infection-maps-0.1.0.zip",
-    "bytes": 371170,
-    "sha256": "3c41730ba81d487489b3bbdba4390555aa6a5fa46466c7fc7242bcca5a7e67b6",
-    "sha512": "e5d9aa4d859ed842299bc786b26d3f75f0c1261645040f290171349e5d2b123fc0549b2cef3ac7ea46859b78c7114b25e1a4dc687c0e398ebbe4d944ecc9725f"
-  },
-  "release_stage": "development-candidate",
-  "full_live_qualification": "pending"
+    "bytes": 371184,
+    "sha256": "55ad893d63c4c4257f8c8833e40ed00a2150e76b3718753f9f0dec00f69181ba",
+    "sha512": "fd38e4d2a9ea0b70759536b0fe57d68ad813e16f4186109f64815ec27ef5dec7c8a576e4ff421f04d575ebcb0cc3d825ed03140366503cb299e8fab9883c03e7"
+  }
 }

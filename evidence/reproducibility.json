@@ -9,12 +9,12 @@
     {
       "map": "zm_kgb_depot_v1",
       "same_bytes_from_clean_output_directory": true,
-      "sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0"
+      "sha256": "fed1d857a6028f1c1302bc31578f4a1930d07f5768a1f1617e4c9762ac3f3780"
     },
     {
       "map": "zm_kgb_containment_v1",
       "same_bytes_from_clean_output_directory": true,
-      "sha256": "ef7003bf071e785618d5c3d835fbe7d9d4657a8b5a5071b49cc9df68c9a68322"
+      "sha256": "acc6b752acc5706e7c803758c1c84c6b224376146f49ec2dd0caaf0edc475988"
     }
   ]
 }

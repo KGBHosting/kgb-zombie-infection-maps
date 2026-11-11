@@ -36,14 +36,15 @@
   "limits": [
     "OS apt packages are recorded in evidence/toolchain-packages.txt, not snapshot-pinned. Exact compiler image and executable hashes identify the qualified local toolchain. A future fresh image build must independently qualify compiler bytes and map outputs.",
     "Upstream compiler source emits one pre-existing enum comparison warning in common/bspinfo.cc:732. All three map qbsp/vis/light passes are warning/error/leak-free.",
-    "Compiler binaries and third-party dependencies are build-only; not shipped in map runtime ZIP."
+    "Compiler binaries and third-party dependencies are build-only; not shipped in map runtime ZIP.",
+    "Cross-CPU BSP lighting bytes are not universally identical. Canonical release target is the documented GitHub-hosted Ubuntu24.04 source build; exact hashes and two clean-output builds are required there. Local Apple translation builds vary only bounded RGB lighting samples in two maps."
   ],
   "ci_source_build": {
     "runner": "ubuntu-24.04",
     "source": "same compiler commit/submodules and SHA256-verified Embree/oneTBB archives",
     "host_tools": "preinstalled CMake/Ninja/C++; exact versions and compiler SHA256 recorded in CI artifact evidence/ci-toolchain.json",
     "offline": "sudo unshare --net for configure, source build and both map compiles",
-    "acceptance": "exact frozen runtime ZIP and all four file SHA256/SHA512 required"
+    "acceptance": "two clean output-directory builds and exact canonical runtime ZIP/all four file SHA256/SHA512; no claim of universal cross-CPU equality"
   },
   "source_build_dependencies": [
     {
@@ -64,6 +65,6 @@
     "upstream_base_commit": "c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a",
     "embree_device_config": "max_isa=avx2,frequency_level=simd128,threads=1",
     "official_api_reference": "https://github.com/RenderKit/embree/blob/v4.4.0/doc/src/api/rtcNewDevice.md",
-    "purpose": "Bound CPU-dependent BVH traversal policy and scene-build concurrency; disposable local probe preserved every frozen BSP byte. Native CI must independently reproduce exact hashes."
+    "purpose": "Bound CPU-dependent BVH traversal policy and scene-build concurrency. This does not guarantee cross-CPU bitwise equality; see evidence/canonical-build.json."
   }
 }
