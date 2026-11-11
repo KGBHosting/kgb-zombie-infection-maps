@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
-"""Create deterministic allowlisted runtime ZIP: three BSPs and dedicated cycle."""
+"""Package hash-verified first-party canonical release bytes, never CPU variants.
+
+CI independently source-compiles twice and compares every non-lighting byte
+before this step. Rebuilds do not replace the live-qualified release authority.
+"""
 import hashlib
 import json
 from pathlib import Path
 import zipfile
 from generate import NAMES
 from validate import inspect
+from release_reference import checked_reference
 
 ROOT=Path(__file__).resolve().parents[1]
-cycle=''.join(name+'\n' for name in NAMES).encode()
-files=[('kgb_zombie_infection_mapcycle.txt',cycle)]
+_, files=checked_reference()
+cycle=files[0][1]
+assert files[0][0]=='kgb_zombie_infection_mapcycle.txt'
+assert cycle==''.join(name+'\n' for name in NAMES).encode()
 for name in NAMES:
-    p=ROOT/'build/candidate'/f'{name}.bsp'
-    inspect(p,navigation=False)
-    files.append((f'maps/{name}.bsp',p.read_bytes()))
+    inspect(ROOT/'release/0.1.0/runtime/maps'/f'{name}.bsp',navigation=False)
 archive=ROOT/'dist/kgb-zombie-infection-maps-0.1.0.zip'
 archive.parent.mkdir(parents=True,exist_ok=True)
 with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:

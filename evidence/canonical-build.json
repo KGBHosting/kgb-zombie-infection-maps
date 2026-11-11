@@ -142,12 +142,23 @@
       "previous_local_sha512": "f98aea4a16b3cae951a79f34aa170d5816a8ac5265e0fec5f282d2b631220482d0a942903b38d78dc36b4a6d7b05fd550064cecfb886f42016cecbfda12bd686"
     }
   ],
-  "status": "canonical component qualification passed; exact source-head CI required before immutable prerelease",
+  "status": "canonical component qualification passed; precompiled first-party CC0 reference is immutable release authority; fresh exact source-head CI requires actual source builds twice, same-job identity, all non-lighting/header bytes exact and static checks before packaging canonical bytes",
   "cross_cpu_bitwise_reproducibility": false,
   "previous_unpublished_local_archive": {
     "bytes": 371170,
     "sha256": "3c41730ba81d487489b3bbdba4390555aa6a5fa46466c7fc7242bcca5a7e67b6",
     "sha512": "e5d9aa4d859ed842299bc786b26d3f75f0c1261645040f290171349e5d2b123fc0549b2cef3ac7ea46859b78c7114b25e1a4dc687c0e398ebbe4d944ecc9725f",
     "published": false
+  },
+  "release_authority": {
+    "reference": "release/0.1.0/runtime/",
+    "license": "CC0-1.0",
+    "source_compilation_required": true,
+    "source_rebuilds_required": 2,
+    "same_job_bitwise_identity_required": true,
+    "canonical_header_and_all_bytes_outside_rgb_must_match": true,
+    "rgb_rebuild_deltas_reported_not_published": true,
+    "canonical_runtime_every_byte_sha256_sha512_pinned": true,
+    "universal_cross_cpu_or_runner_label_bitwise_promise": false
   }
 }

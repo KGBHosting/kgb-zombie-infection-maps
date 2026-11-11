@@ -30,6 +30,7 @@ jobs:
           make validate test
           sh tools/compile-native-ci.sh build/repro
           python3 tools/check_repro.py
+          python3 tools/compare_rebuild.py
       - name: Package and verify canonical runtime bytes
         run: |
           python3 tools/package.py
@@ -44,6 +45,7 @@ jobs:
             evidence/qualification.json
             evidence/reproducibility.json
             evidence/ci-toolchain.json
+            evidence/rebuild-comparison.json
             build/candidate/*.bsp
             build/candidate/*.light.log
           if-no-files-found: error
