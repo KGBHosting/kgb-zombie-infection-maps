@@ -24,6 +24,7 @@ jobs:
       - name: Build pinned official compiler from source
         run: sh tools/bootstrap-native-ci.sh
       - name: Compile, inspect hulls and run negative controls
+        id: maps
         run: |
           sh tools/compile-native-ci.sh build/candidate
           make validate test
@@ -34,6 +35,7 @@ jobs:
           python3 tools/package.py
           python3 tools/verify_release.py
       - uses: actions/upload-artifact@v7
+        if: always() && steps.maps.outcome == 'success'
         with:
           name: kgb-zombie-infection-maps-${{ github.sha }}
           path: |
@@ -42,4 +44,6 @@ jobs:
             evidence/qualification.json
             evidence/reproducibility.json
             evidence/ci-toolchain.json
+            build/candidate/*.bsp
+            build/candidate/*.light.log
           if-no-files-found: error
