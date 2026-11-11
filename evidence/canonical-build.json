@@ -111,7 +111,9 @@
       "changed_bytes": 18,
       "max_channel_delta": 7,
       "all_differences_within_rgb_lighting": true,
-      "fourteen_non_lighting_lumps_identical": true
+      "fourteen_non_lighting_lumps_identical": true,
+      "previous_local_sha256": "ef7003bf071e785618d5c3d835fbe7d9d4657a8b5a5071b49cc9df68c9a68322",
+      "previous_local_sha512": "b8e2b01726c61728d1014bd9cbff32b3f2ff7e2ae49a8c0ca927312d2f4c3c102739c9c559c45e7032525c0352a0a8f85728825322e50f53083c7694c9bcc051"
     },
     {
       "map": "zm_kgb_courtyard_v1.bsp",
@@ -121,7 +123,9 @@
       "changed_bytes": 0,
       "max_channel_delta": 0,
       "all_differences_within_rgb_lighting": true,
-      "fourteen_non_lighting_lumps_identical": true
+      "fourteen_non_lighting_lumps_identical": true,
+      "previous_local_sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e",
+      "previous_local_sha512": "7276990cc92c74594ec2a817355da2d71a4f1d81d84c3ecf16c9bdee2ac193fb6652524e705d11064d45dfec7097c28f772517154709f4bb8f371d47b8663943"
     },
     {
       "map": "zm_kgb_depot_v1.bsp",
@@ -133,9 +137,17 @@
       "changed_bytes": 18,
       "max_channel_delta": 17,
       "all_differences_within_rgb_lighting": true,
-      "fourteen_non_lighting_lumps_identical": true
+      "fourteen_non_lighting_lumps_identical": true,
+      "previous_local_sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0",
+      "previous_local_sha512": "f98aea4a16b3cae951a79f34aa170d5816a8ac5265e0fec5f282d2b631220482d0a942903b38d78dc36b4a6d7b05fd550064cecfb886f42016cecbfda12bd686"
     }
   ],
-  "status": "canonical candidate approved for final-byte live requalification; publication held",
-  "cross_cpu_bitwise_reproducibility": false
+  "status": "canonical component qualification passed; exact source-head CI required before immutable prerelease",
+  "cross_cpu_bitwise_reproducibility": false,
+  "previous_unpublished_local_archive": {
+    "bytes": 371170,
+    "sha256": "3c41730ba81d487489b3bbdba4390555aa6a5fa46466c7fc7242bcca5a7e67b6",
+    "sha512": "e5d9aa4d859ed842299bc786b26d3f75f0c1261645040f290171349e5d2b123fc0549b2cef3ac7ea46859b78c7114b25e1a4dc687c0e398ebbe4d944ecc9725f",
+    "published": false
+  }
 }

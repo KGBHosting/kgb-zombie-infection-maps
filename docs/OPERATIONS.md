@@ -1,0 +1,27 @@
+# Development replacement and compressed download caches
+
+Released map filenames and bytes are immutable. A later layout, texture or lighting change requires a new package version and fresh qualification. The manual replacement below occurred only while qualifying an unpublished development candidate; it is not permission to replace published release assets.
+
+## Observed compressed-cache trap (2026-11-11)
+
+The task operator replaced the two unpublished depot/containment BSPs offline after verifying their old hashes. Although the underlying server BSPs matched the new canonical build, a genuine Valve client still downloaded the old depot bytes. The operator then independently decompressed the server's two corresponding `<map>.bsp.ztmp` files: each reproduced its exact earlier BSP hash. This directly established stale server download-cache content. Only those two task-owned, verified stale caches were removed offline; broad cache deletion was not used. The operator then confirmed the canonical depot download after cache invalidation; a full Valve client restart was also required before normal entry with the changed same-name BSP/CRC. This is an observed recovery step, not a claim about unpublished client internals. Final-byte qualification was counted only after the downloaded hash matched.
+
+ReHLDS's public [file-transfer implementation at commit 675e9f519aea9a31c1b98d214d77684d9e52d771](https://github.com/rehlds/ReHLDS/blob/675e9f519aea9a31c1b98d214d77684d9e52d771/rehlds/engine/net_chan.cpp#L1325-L1331) explains a possible mechanism: it reuses `<filename>.ztmp` when its timestamp is at least that of the original file; that decision does not hash their contents. The [transmit path](https://github.com/rehlds/ReHLDS/blob/675e9f519aea9a31c1b98d214d77684d9e52d771/rehlds/engine/net_chan.cpp#L425-L435) opens the cached compressed file. This public source is explanatory context, not a claim that its current commit is the tested server's exact engine build.
+
+## Bounded recovery protocol
+
+1. Stop the task-owned development server. Verify the existing original and replacement BSP hashes against the intended candidate manifest; keep any required backup private.
+2. Inspect only the matching map-specific compressed cache. Record its own hash, decompress with a bounded output size and compare the resulting BSP hash to the known old and new candidates. An unfamiliar, modified or unowned file must not be silently deleted.
+3. Invalidate only a cache proven to derive from the task-owned old map. Keep published files, unrelated maps, customer files and other caches untouched. Do not treat the cache as one of the four managed runtime ZIP members.
+4. With the test client disconnected, remove or preserve privately only its proven task-owned old download. Confirm no second old copy remains in an active client search path. Restart the test client if a changed same-name BSP/CRC remains active in memory. Do not erase unrelated client content.
+5. Reconnect through the actual Valve download path and hash the resulting client BSP. Require the exact canonical manifest hash before counting visual, movement, combat or capacity checks as final-byte qualification. A correct server source file alone is insufficient evidence.
+
+This incident concerned prepublication manual replacement of two unchanged basenames. It does not justify overwriting immutable public map versions or weakening managed-file collision and ownership checks.
+
+## Native spawn location versus post-spawn human team
+
+A controlled canonical-depot reset produced 32 genuinely joined/alive CTs with one native spawn each, 32 distinct clear hulls, 25 north CT origins and seven south T origins. The capacity helper did not write teams, origins or spawn state. This is valid functional capacity evidence; it is not evidence that that particular reset selected all 32 CT-specific origins.
+
+The product core's pinned [round-reset callback](https://github.com/KGBHosting/kgb-zombie-infection/blob/3bb1589b11ad77bae86f781393ac5d26277ac510/src/kgb_zombie_infection.sma#L113-L123) clears role flags without changing the native team. Its [post-spawn handler](https://github.com/KGBHosting/kgb-zombie-infection/blob/3bb1589b11ad77bae86f781393ac5d26277ac510/src/kgb_zombie_infection.sma#L221-L237) subsequently calls [make_human](https://github.com/KGBHosting/kgb-zombie-infection/blob/3bb1589b11ad77bae86f781393ac5d26277ac510/src/kgb_zombie_infection.sma#L386-L390), which sets CT. Pinned ReGameDLL [chooses the spawn using the team's value during native Spawn](https://github.com/rehlds/ReGameDLL_CS/blob/70307312cde05cec5d73a3d3a384b4bdac3d5fe2/regamedll/dlls/player.cpp#L5682-L5704), [before that Spawn completes](https://github.com/rehlds/ReGameDLL_CS/blob/70307312cde05cec5d73a3d3a384b4bdac3d5fe2/regamedll/dlls/player.cpp#L5989-L5997). A previously infected T can therefore use a valid T origin and become human/CT in the post-spawn callback. This source-confirmed mechanism explains why final team and spawn-region need not match; the snapshot alone does not identify each player's preceding team.
+
+To specifically qualify every CT origin, take another normal engine round reset while all players remain human/CT, before the preparation deadline starts infection. If extra setup time is needed, a temporary test-only preparation delay may be used and must be restored; do not force player team/JOINED/spawn state or change the product core to satisfy the fixture. Record all-CT-origin coverage separately from functional capacity.

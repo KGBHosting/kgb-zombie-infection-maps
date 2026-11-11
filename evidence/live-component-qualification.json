@@ -1,0 +1,108 @@
+{
+  "date_utc": "2026-11-11",
+  "scope": "controlled component qualification, not managed Panel lifecycle or production readiness",
+  "status": "controlled component qualification passed for exact canonical runtime bytes; managed lifecycle remains pending",
+  "archive": {
+    "path": "kgb-zombie-infection-maps-0.1.0.zip",
+    "bytes": 371184,
+    "sha256": "55ad893d63c4c4257f8c8833e40ed00a2150e76b3718753f9f0dec00f69181ba",
+    "sha512": "fd38e4d2a9ea0b70759536b0fe57d68ad813e16f4186109f64815ec27ef5dec7c8a576e4ff421f04d575ebcb0cc3d825ed03140366503cb299e8fab9883c03e7"
+  },
+  "core": {
+    "version": "0.1.3",
+    "source_commit": "3bb1589b11ad77bae86f781393ac5d26277ac510",
+    "source": "https://github.com/KGBHosting/kgb-zombie-infection/tree/v0.1.3"
+  },
+  "capacity_instrumentation": {
+    "test_only": true,
+    "engine_fake_clients_are_explicit_test_doubles": true,
+    "source_sha256": "f8f86d7dfa6a72dfb4637407d2a27d46c2d6a0422dd954e5c5bd991e5e684f7a",
+    "source": "https://github.com/KGBHosting/kgb-zombie-infection/blob/92170eddc09be7a1c2aebb48b9fde74753961c43/tests/live/capacity/kgb_zi_capacity_helper.sma",
+    "genuine_client_joined_state_not_forced": true,
+    "native_round_restart_and_spawn_only": true
+  },
+  "maps": [
+    {
+      "map": "zm_kgb_courtyard_v1",
+      "bytes": 659496,
+      "sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e",
+      "sha512": "7276990cc92c74594ec2a817355da2d71a4f1d81d84c3ecf16c9bdee2ac193fb6652524e705d11064d45dfec7097c28f772517154709f4bb8f371d47b8663943",
+      "status": "controlled component checks passed",
+      "genuine_valve_download_sha256_matched": true,
+      "real_client_rendering_and_routes_checked": true,
+      "representative_real_knife_infection_and_single_win_reset_checked": true,
+      "capacity": {
+        "connected": 32,
+        "joined": 32,
+        "alive_ct": 32,
+        "genuine_clients": 1,
+        "owned_stationary_test_doubles": 31,
+        "native_spawns_each_in_observed_round": 1,
+        "unique_actual_hull_origins": 32,
+        "ct_origin_coverage": 32,
+        "player_hull_overlap_pairs": 0,
+        "world_blocked_hulls": 0
+      },
+      "qualification_basis": "exact unchanged canonical BSP; retained earlier live component results"
+    },
+    {
+      "map": "zm_kgb_depot_v1",
+      "bytes": 689944,
+      "sha256": "fed1d857a6028f1c1302bc31578f4a1930d07f5768a1f1617e4c9762ac3f3780",
+      "sha512": "702cabfeee25245d1b16758bf326a94403b15934adc3486d6bc5016bac2a12917724459d9e3fbeb4c50956624b71abee26354735b8f82716ed52bf9eaee7df45",
+      "status": "controlled component checks passed",
+      "genuine_valve_download_sha256_matched": true,
+      "real_client_rendering_and_routes_checked": true,
+      "representative_real_knife_infection_and_single_win_reset_checked": true,
+      "capacity": {
+        "connected": 32,
+        "joined": 32,
+        "alive_ct": 32,
+        "genuine_clients": 1,
+        "owned_stationary_test_doubles": 31,
+        "native_spawns_each_in_observed_round": 1,
+        "unique_actual_hull_origins": 32,
+        "ct_origin_coverage": 32,
+        "player_hull_overlap_pairs": 0,
+        "world_blocked_hulls": 0
+      },
+      "qualification_basis": "canonical BSP freshly downloaded and requalified after stale compressed-cache invalidation; temporary60s preparation restored to15s",
+      "new_byte_route_scope": "Real zombie climbed west stairs to 160-unit platform and crossed elevated catwalk to east platform; earlier wider route checks retained because all 14 non-lighting lumps are identical.",
+      "representative_combat_scope": "Real Valve secondary knife converted an alive human fixture to alive 3000HP T without death; one T point and native 3-second CT reset."
+    },
+    {
+      "map": "zm_kgb_containment_v1",
+      "bytes": 653312,
+      "sha256": "acc6b752acc5706e7c803758c1c84c6b224376146f49ec2dd0caaf0edc475988",
+      "sha512": "d1cee25fbee1fbb74cc3686996e4a26d6a82c4199d7b5e0d1edb2f3374bfae351fd9c2891c7cdd4d34e21a435db91729b616eb880325d3ec57e2ae7045e85cc6",
+      "status": "controlled component checks passed",
+      "genuine_valve_download_sha256_matched": true,
+      "real_client_rendering_and_routes_checked": true,
+      "representative_real_knife_infection_and_single_win_reset_checked": true,
+      "capacity": {
+        "connected": 32,
+        "joined": 32,
+        "alive_ct": 32,
+        "genuine_clients": 1,
+        "owned_stationary_test_doubles": 31,
+        "native_spawns_each_in_observed_round": 1,
+        "unique_actual_hull_origins": 32,
+        "ct_origin_coverage": 32,
+        "player_hull_overlap_pairs": 0,
+        "world_blocked_hulls": 0
+      },
+      "qualification_basis": "exact canonical BSP freshly downloaded and requalified after stale compressed-cache invalidation",
+      "new_byte_route_scope": "Real zombie entered northeast room from west approach and stood on 64-unit floor; opposite exit was not newly qualified after a drifted attempt. Earlier opposing-door/dais checks retained because all 14 non-lighting lumps are identical.",
+      "representative_combat_scope": "Ground corridor actual Valve secondary knife converted alive human fixture to alive 3000HP T without damage/death; one T point and native 3-second CT reset. No raised-room combat claim.",
+      "default180_second_human_survival_single_ct_win_and_reset": true,
+      "real_client_death_followed_by_native_zombie_respawn": true
+    }
+  ],
+  "limitations": [
+    "One genuine Valve Steam client plus stationary engine fake test doubles; not 32-real-human load/performance qualification.",
+    "Gameplay balance is not established by controlled routes, capacity and representative combat.",
+    "Managed Panel install/uninstall/default-map/mapcycle lifecycle remains pending.",
+    "No production-readiness claim."
+  ],
+  "evidence_basis": "Task operator reported these aggregate real-client/server observations. Private identity-bearing screenshots, endpoints and raw logs are not included; public test-only instrumentation and acceptance protocol support reproduction."
+}

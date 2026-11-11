@@ -2,7 +2,7 @@
 
 Three original **development maps** for classic Counter-Strike 1.6 zombie infection. Humans prepare, defend and survive; zombies attack through multiple approaches. There is no escape objective. These are new layouts, not recreations or decompilations of customer, Valve or community maps.
 
-Version **0.1.0** is a **development candidate**. Source/build/static qualification passed. Controlled component checks completed on the earlier local candidate with one genuine Valve Steam client and 31 explicitly labeled stationary test clients: all three maps downloaded/rendered, native round resets spawned all 32 CTs without hull overlaps or blocked hulls, and real movement/infection/round outcomes were exercised. The canonical release build changes only 18 RGB lighting bytes each in depot and containment; their final-byte live requalification is pending. Courtyard and the cycle are byte-identical. Managed installation, default-map restoration and rotation acceptance remain pending. This is not a 32-human load/performance or production-ready claim.
+Version **0.1.0** is a **development candidate**. Source/build/static checks and controlled component qualification passed for the exact canonical runtime bytes, using one genuine Valve Steam client and 31 explicitly labeled stationary test clients. All three BSP downloads/rendering and native32-CT resets with distinct clear hulls were checked, together with representative real movement, infection and core-owned win/reset behavior. Courtyard retained its byte-identical earlier qualification; the two changed-lighting BSPs were freshly downloaded and requalified. Broader earlier route checks remain applicable because every geometry/entity/collision byte is identical; not every route or raised-position combat was repeated on the changed-lighting files. See [the bounded aggregate evidence](evidence/live-component-qualification.json). Managed installation, default-map restoration and rotation acceptance remain pending. This is not a 32-human load/performance, balance or production-ready claim.
 
 | Map | Layout and defense positions |
 | --- | --- |
@@ -41,6 +41,19 @@ CI explicitly selects GitHub's `ubuntu-24.04` runner to avoid `ubuntu-latest` la
 
 To avoid that external apt availability dependency, CI builds the **same pinned compiler source** using the hosted runner's existing CMake/Ninja/C++ tools and the exact verified Embree/TBB archives. It records tool versions and compiler executable hashes in `evidence/ci-toolchain.json`. Upstream also unconditionally requests GoogleTest even with compiler tests disabled; its exact upstream-pinned commit is prefetched from the official BSD-3-Clause source and supplied through `FETCHCONTENT_SOURCE_DIR_GOOGLETEST` with fully-disconnected mode. Configure, compiler build and both map compilation passes run in fresh network namespaces (`sudo unshare --net`); no prebuilt compiler or prebuilt maps replace source compilation. The local Docker route remains available and uses the [official runner mirror priority](https://github.com/actions/runner-images/blob/main/images/ubuntu/scripts/build/configure-apt-sources.sh), preserving Ubuntu's `Signed-By` keyring and failing on any package-index update error. The canonical release target is the documented GitHub-hosted Ubuntu24.04 source build. It must satisfy two clean output-directory builds and the exact per-file/runtime ZIP hashes in `release/0.1.0.json`; a successful compiler exit alone is insufficient. The local Docker route may produce different lighting bytes and is not the release authority. No broader cross-CPU bitwise promise is made.
 
+To follow the canonical source-build route on the documented Ubuntu24.04 target (with the runner's CMake/Ninja/C++ prerequisites and permission to create isolated network namespaces), use the same commands as CI:
+
+```sh
+make generate
+sh tools/bootstrap-native-ci.sh
+sh tools/compile-native-ci.sh build/candidate
+make validate test
+sh tools/compile-native-ci.sh build/repro
+python3 tools/check_repro.py
+python3 tools/package.py
+python3 tools/verify_release.py
+```
+
 The source-built compiler receives one [build-only GPL patch](tools/patches/embree-deterministic-device.patch) (complete [GPLv3 text](licenses/GPL-3.0.txt)) setting supported Embree device options `max_isa=avx2,frequency_level=simd128,threads=1`. A bounded four-ISA diagnostic did not establish universal cross-CPU equality. The selected canonical ZIP was identical across two independent native CI jobs, with two clean map rebuilds also identical within each job. Against the earlier local candidate, every BSP header and all 14 non-lighting lumps are byte-identical. Depot and containment each differ in exactly 18 RGB lighting bytes (maximum channel deltas 17 and 7); courtyard is entirely identical. No BSP bytes were manually patched. Full comparisons, build identity and public CI links are in [evidence/canonical-build.json](evidence/canonical-build.json). The base source, patch SHA256, configuration and [official device API](https://github.com/RenderKit/embree/blob/v4.4.0/doc/src/api/rtcNewDevice.md) are recorded in the toolchain metadata; the patch is absent from the runtime ZIP.
 
 Qualified builds use one worker for BSP/VIS/light, full VIS and `light -extra`. No BSP2, BSPX, `.lit` or engine extensions are requested. The qualified local compiler source has one upstream enum comparison warning in `common/bspinfo.cc:732`; all three **map compilation passes** are warning/error/leak-free. That compiler warning has not been patched or hidden.
@@ -57,7 +70,7 @@ The local qualification in `evidence/qualification.json` checks:
 
 Eight focused tests include negative controls that corrupt a local map copy: overlapping/blocked spawns, missing embedded texture data, wrong BSP version, unknown entity, missing lighting and invalid lump bounds. They never alter a server.
 
-The compiler's SVG previews in `evidence/*.compiled-preview.svg` show actual compiled geometry from above. They are **offline previews**, not client screenshots. Crate roofs, decorative ledges and jump routes are not certified by the ordinary-walk grid. Controlled capacity and component gameplay results are bounded to one genuine client plus stationary test fixtures; they establish neither 32-real-client performance nor broad gameplay balance. Final-byte requalification and managed lifecycle/rotation requirements are tracked in [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md). The runtime pack has no map-specific briefing `.txt` files; some Valve clients may retain a previous stock-map briefing in the team-selection panel. This presentation limitation is reserved for a later package version.
+The compiler's SVG previews in `evidence/*.compiled-preview.svg` show actual compiled geometry from above. They are **offline previews**, not client screenshots. Crate roofs, decorative ledges and jump routes are not certified by the ordinary-walk grid. Controlled capacity and component gameplay results are bounded to one genuine client plus stationary test fixtures; they establish neither 32-real-client performance nor broad gameplay balance. Final-byte component scope and remaining managed lifecycle/rotation requirements are tracked in [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md). The runtime pack has no map-specific briefing `.txt` files; some Valve clients may retain a previous stock-map briefing in the team-selection panel. This presentation limitation is reserved for a later package version.
 
 ## Runtime package contract
 
@@ -73,3 +86,5 @@ maps/zm_kgb_containment_v1.bsp
 The cycle lists courtyard, depot and containment in that order, one basename per line. The pack leaves `mapcycle.txt` and stock maps untouched. Courtyard is the proposed managed startup default. Source, license and build provenance belong in separate release artifacts. Installation must use explicit managed-file mappings with pinned hashes and must refuse collisions with unowned files; it must not blindly extract arbitrary archives.
 
 `dist/manifest.json` records per-file SHA256/SHA512 and archive bytes/hashes. Published filenames/version pins must be immutable. A later map change requires a new version and fresh qualification.
+
+The prepublication compressed-download cache incident and bounded hash-guarded recovery are documented in [docs/OPERATIONS.md](docs/OPERATIONS.md).
