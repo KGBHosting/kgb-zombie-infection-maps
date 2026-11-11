@@ -15,6 +15,7 @@ for name in NAMES:
     inspect(p,navigation=False)
     files.append((f'maps/{name}.bsp',p.read_bytes()))
 archive=ROOT/'dist/kgb-zombie-infection-maps-0.1.0.zip'
+archive.parent.mkdir(parents=True,exist_ok=True)
 with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
     for name,data in files:
         info=zipfile.ZipInfo(name,date_time=(1980,1,1,0,0,0));info.create_system=3

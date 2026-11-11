@@ -24,5 +24,13 @@ fi
 if [ ! -f .cache/oneapi-tbb-2021.11.0-lin.tgz ]; then
   curl --fail --location --silent --show-error https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz -o .cache/oneapi-tbb-2021.11.0-lin.tgz
 fi
-# Dockerfile verifies both dependency archive SHA256 hashes before extraction.
+# Verify public dependency bytes before either source-build route uses them.
+python3 - <<'CHECKSUMS'
+import hashlib,json
+from pathlib import Path
+for dependency in json.loads(Path('tools/toolchain.json').read_text())['dependencies']:
+    archive=Path('.cache')/dependency['url'].rsplit('/',1)[1]
+    assert hashlib.sha256(archive.read_bytes()).hexdigest()==dependency['sha256'],dependency['name']
+CHECKSUMS
+if [ "${FETCH_ONLY:-0}" = 1 ]; then exit 0; fi
 docker build --platform linux/amd64 -f tools/Dockerfile -t kgb-zi-map-tools:alpha11 .

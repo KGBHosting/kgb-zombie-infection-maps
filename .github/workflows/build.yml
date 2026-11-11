@@ -22,13 +22,16 @@ jobs:
       - name: Check public provisioning connectivity
         run: python3 tools/check-ci-network.py
       - name: Build pinned official compiler from source
-        run: make toolchain
+        run: sh tools/bootstrap-native-ci.sh
       - name: Compile, inspect hulls and run negative controls
         run: |
-          make compile validate test repro
+          sh tools/compile-native-ci.sh build/candidate
+          make validate test
+          sh tools/compile-native-ci.sh build/repro
+          python3 tools/check_repro.py
       - name: Package and verify frozen runtime bytes
         run: |
-          docker run --rm --platform linux/amd64 --network none -v "$PWD:/work" kgb-zi-map-tools:alpha11 python3 tools/package.py
+          python3 tools/package.py
           python3 tools/verify_release.py
       - uses: actions/upload-artifact@v7
         with:
@@ -38,4 +41,5 @@ jobs:
             dist/manifest.json
             evidence/qualification.json
             evidence/reproducibility.json
+            evidence/ci-toolchain.json
           if-no-files-found: error
