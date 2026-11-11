@@ -20,6 +20,8 @@ jobs:
           make generate
           git diff --exit-code -- src assets
       - name: Build pinned official compiler from source
+        env:
+          DOCKER_BUILD_NETWORK: host
         run: make toolchain
       - name: Compile, inspect hulls and run negative controls
         run: |

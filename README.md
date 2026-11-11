@@ -37,6 +37,8 @@ make package
 
 `make toolchain` pins the Ubuntu image digest, compiler source/submodule commits and dependency archive SHA256 hashes. Apt package versions are recorded in `evidence/toolchain-packages.txt`; the apt repository is not snapshot-pinned. The qualified local image and executable hashes are recorded. A fresh compiler image must independently qualify its outputs; cross-platform byte equality has not been tested.
 
+The CI runner's default Docker build bridge failed public Ubuntu DNS on two attempts. CI therefore selects `DOCKER_BUILD_NETWORK=host` only for compiler-image provisioning, using Docker's documented [`--network` build option](https://docs.docker.com/reference/cli/docker/buildx/build/#network). Local builds default to the normal Docker network. Map compilation, reproducibility checks and container packaging retain `--network none`; this adjustment does not change map sources, compiler/dependency pins or the reviewed runtime hashes.
+
 Both local builds use one worker for BSP/VIS/light, full VIS and `light -extra`. No BSP2, BSPX, `.lit` or engine extensions are requested. The qualified local compiler source has one upstream enum comparison warning in `common/bspinfo.cc:732`; all three **map compilation passes** are warning/error/leak-free. That compiler warning has not been patched or hidden.
 
 ## Verification and limits

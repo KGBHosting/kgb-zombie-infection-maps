@@ -25,4 +25,8 @@ if [ ! -f .cache/oneapi-tbb-2021.11.0-lin.tgz ]; then
   curl --fail --location --silent --show-error https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz -o .cache/oneapi-tbb-2021.11.0-lin.tgz
 fi
 # Dockerfile verifies both dependency archive SHA256 hashes before extraction.
-docker build --platform linux/amd64 -f tools/Dockerfile -t kgb-zi-map-tools:alpha11 .
+# Hosted CI can use its working host DNS for public package provisioning.
+# This affects Dockerfile RUN only, never the offline map compilation steps.
+build_network="${DOCKER_BUILD_NETWORK:-default}"
+case "$build_network" in default|host) ;; *) echo 'Unsupported build network' >&2; exit 1 ;; esac
+docker build --network "$build_network" --platform linux/amd64 -f tools/Dockerfile -t kgb-zi-map-tools:alpha11 .
