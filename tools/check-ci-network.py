@@ -4,7 +4,7 @@ import json, os, subprocess, urllib.request
 
 proxy_keys = ("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY", "http_proxy", "https_proxy", "all_proxy", "no_proxy")
 record = {"proxy_environment_present": {key: bool(os.environ.get(key)) for key in proxy_keys}}
-for host in ("archive.ubuntu.com", "security.ubuntu.com"):
+for host in ("archive.ubuntu.com", "security.ubuntu.com", "azure.archive.ubuntu.com"):
     try:
         dns = subprocess.run(["getent", "ahosts", host], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=8).returncode == 0
     except (OSError, subprocess.TimeoutExpired):
