@@ -1,0 +1,41 @@
+{
+  "compiler": {
+    "repository": "https://github.com/ericwa/ericw-tools",
+    "tag": "2.0.0-alpha11",
+    "commit": "c243aa348c9e5a1838bb69cf6c3ff20bebd94a8a",
+    "license": "GPL-2.0-or-later; Embree-linked compiler builds GPL-3.0-or-later per upstream README",
+    "source_built": true,
+    "submodule_status": [
+      "407c905e45ad75fc29bf0f9bb7c5c2fd3475976f 3rdparty/fmt (407c905)",
+      " 89e2973c754a9c02a49974d839779b151e95afd6 3rdparty/jsoncpp (89e2973)",
+      " 26a9c089ca54927c1658c046749ca1b8fd60422c 3rdparty/nanobench (26a9c08)",
+      " 47f491eeaead1b5a95e27ee3d6bc4c591b0e4462 3rdparty/pareto (heads/master)"
+    ]
+  },
+  "build_platform": "linux/amd64",
+  "base_image": "ubuntu@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852",
+  "local_compiler_image": "sha256:b3d9ec3a6cd3b1a7f3cc8fd3c70c0b5edb880a0b4e0fc7d62f320a79bd56326b",
+  "dependencies": [
+    {
+      "name": "Embree",
+      "version": "4.4.0",
+      "url": "https://github.com/RenderKit/embree/releases/download/v4.4.0/embree-4.4.0.x86_64.linux.tar.gz",
+      "sha256": "cb3d4402537fc9165c76c3316b8953dcfea523cd1eaf588e2de7639864ee3c57",
+      "license": "Apache-2.0",
+      "source": "https://github.com/RenderKit/embree/tree/v4.4.0"
+    },
+    {
+      "name": "oneTBB",
+      "version": "2021.11.0",
+      "url": "https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz",
+      "sha256": "95659f4d7b1711c41ffa190561d4e5b6841efc8091549661c7a2e6207e0fa79b",
+      "license": "Apache-2.0",
+      "source": "https://github.com/uxlfoundation/oneTBB/tree/v2021.11.0"
+    }
+  ],
+  "limits": [
+    "OS apt packages are recorded in evidence/toolchain-packages.txt, not snapshot-pinned. Exact compiler image and executable hashes identify the qualified local toolchain. A future fresh image build must independently qualify compiler bytes and map outputs.",
+    "Upstream compiler source emits one pre-existing enum comparison warning in common/bspinfo.cc:732. All three map qbsp/vis/light passes are warning/error/leak-free.",
+    "Compiler binaries and third-party dependencies are build-only; not shipped in map runtime ZIP."
+  ]
+}

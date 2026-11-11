@@ -1,0 +1,15 @@
+# Required live development qualification
+
+The full checklist is **pending**. An initial development smoke check of courtyard download/rendering/central stairs passed on 2026-11-11; it does not qualify the other maps or 32-slot capacity/gameplay/rotation. The map builder performs no live infrastructure operations. Root owns the task's development server and real Valve Steam client. Core 0.1.3 is a separate immutable artifact.
+
+1. Stop the task-owned development server. Verify exact runtime, plugin and existing candidate file hashes before changing files. Preserve private backups without including names/addresses/credentials in public evidence.
+2. Install only the four allowlisted map-pack files after independent hash verification. Configure the dedicated cycle and startup courtyard through the future managed recipe. Keep existing stock `mapcycle.txt` unchanged.
+3. With the real Valve client, force an absent-map download from the approved development server. Confirm no missing WAD/model/sound/sky errors, no broken textures, correct lighting and successful normal player entry. Repeat for all three BSPs, not just the default.
+4. Walk each spawn region, stair, platform, catwalk, doorway and flank. Verify both approaches to every declared defense position with ordinary human movement. Repeat as a zombie at the core's actual speed/gravity. Check ceiling/head collisions, edge sticking, unintended one-way movement, reachable crate roofs and any safe spots zombies cannot reach.
+5. Use a clearly labeled test-only controlled-client fixture, if needed, to create full 32-slot capacity. Do not force the real human into the joined state or synthesize infection/death events. Verify all 32 humans actually spawn after round reset and no hull overlaps/telefrag failures occur. The 32 CT +32 T static origin count alone does not prove this.
+6. On each map, test initial infection, a real melee conversion, actual human fire killing a full-health zombie, zombie respawn, human survival, zombie victory, score update once and round reset. The source generator has no map win logic; wins must remain core-owned.
+7. Check human preparation time, sightlines and protection for respawning zombies. Record possible long-range farming or positions that favor either team. Balance is not established by static route connectivity.
+8. Verify all three maps cycle, a restart loads the managed default, map changes retain core state correctness, and reconnects/late joins are safe. Check real-client frame rate and server performance at intended capacity; do not infer this from low BSP size.
+9. Stop the server before uninstall. Verify owned hashes and remove only unchanged pack-owned files. Verify prior managed default/cycle are restored and stock/user files remain intact. Record partial-install recovery behavior.
+
+Evidence must distinguish genuine client screenshots/server events from offline previews and test-double behavior. Keep client identities, auth IDs, IPs other than an explicitly approved server endpoint and arbitrary logs private. Do not claim acceptance until every applicable item passes.

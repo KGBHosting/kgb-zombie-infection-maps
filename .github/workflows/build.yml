@@ -1,0 +1,39 @@
+name: Build and qualify development maps
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: maps-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify generated source and original artwork
+        run: |
+          make generate
+          git diff --exit-code -- src assets
+      - name: Build pinned official compiler from source
+        run: make toolchain
+      - name: Compile, inspect hulls and run negative controls
+        run: |
+          make compile validate test repro
+      - name: Package and verify frozen runtime bytes
+        run: |
+          docker run --rm --platform linux/amd64 --network none -v "$PWD:/work" kgb-zi-map-tools:alpha11 python3 tools/package.py
+          python3 tools/verify_release.py
+      - uses: actions/upload-artifact@v7
+        with:
+          name: kgb-zombie-infection-maps-${{ github.sha }}
+          path: |
+            dist/kgb-zombie-infection-maps-0.1.0.zip
+            dist/manifest.json
+            evidence/qualification.json
+            evidence/reproducibility.json
+          if-no-files-found: error

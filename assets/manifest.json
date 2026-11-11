@@ -1,0 +1,27 @@
+{
+  "license": "CC0-1.0",
+  "origin": "Original procedural pixels generated solely by tools/generate.py",
+  "wad": {
+    "path": "assets/kgb_original.wad",
+    "sha256": "d8860077336275e341262a28fc57eb753fa49761a21592964c9aec93d7432a7a",
+    "textures": [
+      "zi_brick",
+      "zi_floor",
+      "zi_metal",
+      "zi_crate",
+      "zi_caution",
+      "zi_lab",
+      "zi_green",
+      "zi_ceiling",
+      "zi_light",
+      "zi_trim",
+      "zi_concrete",
+      "skip"
+    ]
+  },
+  "maps": [
+    "zm_kgb_courtyard_v1",
+    "zm_kgb_depot_v1",
+    "zm_kgb_containment_v1"
+  ]
+}

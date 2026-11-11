@@ -1,0 +1,151 @@
+{
+  "maps": [
+    {
+      "map": "zm_kgb_containment_v1.bsp",
+      "bytes": 653312,
+      "sha256": "ef7003bf071e785618d5c3d835fbe7d9d4657a8b5a5071b49cc9df68c9a68322",
+      "sha512": "b8e2b01726c61728d1014bd9cbff32b3f2ff7e2ae49a8c0ca927312d2f4c3c102739c9c559c45e7032525c0352a0a8f85728825322e50f53083c7694c9bcc051",
+      "bsp_version": 30,
+      "ct_spawns": 32,
+      "t_spawns": 32,
+      "all_spawn_hulls_clear": true,
+      "spawn_hulls_nonoverlapping": true,
+      "embedded_textures": [
+        "skip",
+        "zi_floor",
+        "zi_ceiling",
+        "zi_lab",
+        "zi_light",
+        "zi_green",
+        "zi_trim",
+        "zi_caution"
+      ],
+      "external_client_assets": [],
+      "light_bytes": 345888,
+      "vis_bytes": 4422,
+      "faces": 1327,
+      "clipnodes": 1702,
+      "entity_classes": {
+        "worldspawn": 1,
+        "info_player_start": 32,
+        "info_player_deathmatch": 32,
+        "light": 29
+      },
+      "navigation": {
+        "method": "compiled GoldSrc hull1;32-unit XY grid,18-unit maximum step,4 subsegments per move; no jump simulation",
+        "sampled_nodes": 6084,
+        "reachable_nodes": 5439,
+        "spawn_regions_connected": true,
+        "defense_approach_targets_reached": [
+          "control south",
+          "control north",
+          "room-720 -352 side-1",
+          "room-720 -352 side1",
+          "room-720 352 side-1",
+          "room-720 352 side1",
+          "room720 -352 side-1",
+          "room720 -352 side1",
+          "room720 352 side-1",
+          "room720 352 side1"
+        ],
+        "limits": "Sampling cannot prove continuous engine movement, collision-free simultaneous spawning, balance or client behavior."
+      }
+    },
+    {
+      "map": "zm_kgb_courtyard_v1.bsp",
+      "bytes": 659496,
+      "sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e",
+      "sha512": "7276990cc92c74594ec2a817355da2d71a4f1d81d84c3ecf16c9bdee2ac193fb6652524e705d11064d45dfec7097c28f772517154709f4bb8f371d47b8663943",
+      "bsp_version": 30,
+      "ct_spawns": 32,
+      "t_spawns": 32,
+      "all_spawn_hulls_clear": true,
+      "spawn_hulls_nonoverlapping": true,
+      "embedded_textures": [
+        "skip",
+        "zi_floor",
+        "zi_ceiling",
+        "zi_brick",
+        "zi_light",
+        "zi_trim",
+        "zi_caution",
+        "zi_concrete",
+        "zi_crate"
+      ],
+      "external_client_assets": [],
+      "light_bytes": 334824,
+      "vis_bytes": 4209,
+      "faces": 1300,
+      "clipnodes": 1230,
+      "entity_classes": {
+        "worldspawn": 1,
+        "info_player_start": 32,
+        "info_player_deathmatch": 32,
+        "light": 25
+      },
+      "navigation": {
+        "method": "compiled GoldSrc hull1;32-unit XY grid,18-unit maximum step,4 subsegments per move; no jump simulation",
+        "sampled_nodes": 6028,
+        "reachable_nodes": 5824,
+        "spawn_regions_connected": true,
+        "defense_approach_targets_reached": [
+          "fort south",
+          "fort north",
+          "arcade-816 -240",
+          "arcade-816 240",
+          "arcade816 -240",
+          "arcade816 240"
+        ],
+        "limits": "Sampling cannot prove continuous engine movement, collision-free simultaneous spawning, balance or client behavior."
+      }
+    },
+    {
+      "map": "zm_kgb_depot_v1.bsp",
+      "bytes": 689944,
+      "sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0",
+      "sha512": "f98aea4a16b3cae951a79f34aa170d5816a8ac5265e0fec5f282d2b631220482d0a942903b38d78dc36b4a6d7b05fd550064cecfb886f42016cecbfda12bd686",
+      "bsp_version": 30,
+      "ct_spawns": 32,
+      "t_spawns": 32,
+      "all_spawn_hulls_clear": true,
+      "spawn_hulls_nonoverlapping": true,
+      "embedded_textures": [
+        "skip",
+        "zi_floor",
+        "zi_ceiling",
+        "zi_metal",
+        "zi_light",
+        "zi_trim",
+        "zi_caution",
+        "zi_crate"
+      ],
+      "external_client_assets": [],
+      "light_bytes": 363852,
+      "vis_bytes": 4852,
+      "faces": 1639,
+      "clipnodes": 1546,
+      "entity_classes": {
+        "worldspawn": 1,
+        "info_player_start": 32,
+        "info_player_deathmatch": 32,
+        "light": 25
+      },
+      "navigation": {
+        "method": "compiled GoldSrc hull1;32-unit XY grid,18-unit maximum step,4 subsegments per move; no jump simulation",
+        "sampled_nodes": 6266,
+        "reachable_nodes": 5961,
+        "spawn_regions_connected": true,
+        "defense_approach_targets_reached": [
+          "loading-800 -320",
+          "loading-800 320",
+          "loading800 -320",
+          "loading800 320",
+          "catwalk west",
+          "catwalk east"
+        ],
+        "limits": "Sampling cannot prove continuous engine movement, collision-free simultaneous spawning, balance or client behavior."
+      }
+    }
+  ],
+  "live_tested": false
+}

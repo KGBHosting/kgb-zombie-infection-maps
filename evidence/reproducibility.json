@@ -1,0 +1,20 @@
+{
+  "same_pinned_toolchain": true,
+  "results": [
+    {
+      "map": "zm_kgb_courtyard_v1",
+      "same_bytes_from_clean_output_directory": true,
+      "sha256": "cdff682e9ad03d6e29f7480950957079e6890f5181aac72f7ef75b3c9c59472e"
+    },
+    {
+      "map": "zm_kgb_depot_v1",
+      "same_bytes_from_clean_output_directory": true,
+      "sha256": "8bb6ad1ce88dc16dc370898471a7b5f694fc73b422b6e7a85e769e1e040464d0"
+    },
+    {
+      "map": "zm_kgb_containment_v1",
+      "same_bytes_from_clean_output_directory": true,
+      "sha256": "ef7003bf071e785618d5c3d835fbe7d9d4657a8b5a5071b49cc9df68c9a68322"
+    }
+  ]
+}

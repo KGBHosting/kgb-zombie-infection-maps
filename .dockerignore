@@ -1,0 +1,6 @@
+*
+!.cache
+!.cache/ericw-tools
+!.cache/ericw-tools/**
+!.cache/embree-4.4.0.x86_64.linux.tar.gz
+!.cache/oneapi-tbb-2021.11.0-lin.tgz

@@ -1,0 +1,1962 @@
+{
+  "name": "zm_kgb_depot_v1",
+  "theme": "Industrial Depot",
+  "brushes": [
+    {
+      "mins": [
+        -1312,
+        -1312,
+        -32
+      ],
+      "maxs": [
+        1312,
+        1312,
+        0
+      ],
+      "texture": "zi_floor",
+      "label": "floor"
+    },
+    {
+      "mins": [
+        -1312,
+        -1312,
+        512
+      ],
+      "maxs": [
+        1312,
+        1312,
+        544
+      ],
+      "texture": "zi_ceiling",
+      "label": "ceiling"
+    },
+    {
+      "mins": [
+        -1312,
+        -1312,
+        0
+      ],
+      "maxs": [
+        -1280,
+        1312,
+        512
+      ],
+      "texture": "zi_metal",
+      "label": "west enclosure"
+    },
+    {
+      "mins": [
+        1280,
+        -1312,
+        0
+      ],
+      "maxs": [
+        1312,
+        1312,
+        512
+      ],
+      "texture": "zi_metal",
+      "label": "east enclosure"
+    },
+    {
+      "mins": [
+        -1280,
+        -1312,
+        0
+      ],
+      "maxs": [
+        1280,
+        -1280,
+        512
+      ],
+      "texture": "zi_metal",
+      "label": "south enclosure"
+    },
+    {
+      "mins": [
+        -1280,
+        1280,
+        0
+      ],
+      "maxs": [
+        1280,
+        1312,
+        512
+      ],
+      "texture": "zi_metal",
+      "label": "north enclosure"
+    },
+    {
+      "mins": [
+        -1008,
+        -1008,
+        504
+      ],
+      "maxs": [
+        -912,
+        -912,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -1008,
+        -48,
+        504
+      ],
+      "maxs": [
+        -912,
+        48,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -1008,
+        912,
+        504
+      ],
+      "maxs": [
+        -912,
+        1008,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -528,
+        -1008,
+        504
+      ],
+      "maxs": [
+        -432,
+        -912,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -528,
+        -48,
+        504
+      ],
+      "maxs": [
+        -432,
+        48,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -528,
+        912,
+        504
+      ],
+      "maxs": [
+        -432,
+        1008,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -48,
+        -1008,
+        504
+      ],
+      "maxs": [
+        48,
+        -912,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -48,
+        -48,
+        504
+      ],
+      "maxs": [
+        48,
+        48,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -48,
+        912,
+        504
+      ],
+      "maxs": [
+        48,
+        1008,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        432,
+        -1008,
+        504
+      ],
+      "maxs": [
+        528,
+        -912,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        432,
+        -48,
+        504
+      ],
+      "maxs": [
+        528,
+        48,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        432,
+        912,
+        504
+      ],
+      "maxs": [
+        528,
+        1008,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        912,
+        -1008,
+        504
+      ],
+      "maxs": [
+        1008,
+        -912,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        912,
+        -48,
+        504
+      ],
+      "maxs": [
+        1008,
+        48,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        912,
+        912,
+        504
+      ],
+      "maxs": [
+        1008,
+        1008,
+        512
+      ],
+      "texture": "zi_light",
+      "label": "ceiling fixture"
+    },
+    {
+      "mins": [
+        -960,
+        -384,
+        0
+      ],
+      "maxs": [
+        -640,
+        384,
+        160
+      ],
+      "texture": "zi_metal",
+      "label": "loading platform"
+    },
+    {
+      "mins": [
+        -880,
+        -416,
+        0
+      ],
+      "maxs": [
+        -720,
+        -384,
+        160
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -448,
+        0
+      ],
+      "maxs": [
+        -720,
+        -416,
+        144
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -480,
+        0
+      ],
+      "maxs": [
+        -720,
+        -448,
+        128
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -512,
+        0
+      ],
+      "maxs": [
+        -720,
+        -480,
+        112
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -544,
+        0
+      ],
+      "maxs": [
+        -720,
+        -512,
+        96
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -576,
+        0
+      ],
+      "maxs": [
+        -720,
+        -544,
+        80
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -608,
+        0
+      ],
+      "maxs": [
+        -720,
+        -576,
+        64
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -640,
+        0
+      ],
+      "maxs": [
+        -720,
+        -608,
+        48
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -672,
+        0
+      ],
+      "maxs": [
+        -720,
+        -640,
+        32
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        -704,
+        0
+      ],
+      "maxs": [
+        -720,
+        -672,
+        16
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        384,
+        0
+      ],
+      "maxs": [
+        -720,
+        416,
+        160
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        416,
+        0
+      ],
+      "maxs": [
+        -720,
+        448,
+        144
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        448,
+        0
+      ],
+      "maxs": [
+        -720,
+        480,
+        128
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        480,
+        0
+      ],
+      "maxs": [
+        -720,
+        512,
+        112
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        512,
+        0
+      ],
+      "maxs": [
+        -720,
+        544,
+        96
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        544,
+        0
+      ],
+      "maxs": [
+        -720,
+        576,
+        80
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        576,
+        0
+      ],
+      "maxs": [
+        -720,
+        608,
+        64
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        608,
+        0
+      ],
+      "maxs": [
+        -720,
+        640,
+        48
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        640,
+        0
+      ],
+      "maxs": [
+        -720,
+        672,
+        32
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -880,
+        672,
+        0
+      ],
+      "maxs": [
+        -720,
+        704,
+        16
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        -960,
+        -288,
+        160
+      ],
+      "maxs": [
+        -912,
+        -256,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        -688,
+        -288,
+        160
+      ],
+      "maxs": [
+        -640,
+        -256,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        -960,
+        256,
+        160
+      ],
+      "maxs": [
+        -912,
+        288,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        -688,
+        256,
+        160
+      ],
+      "maxs": [
+        -640,
+        288,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        -896,
+        -64,
+        160
+      ],
+      "maxs": [
+        -704,
+        -32,
+        208
+      ],
+      "texture": "zi_crate",
+      "label": "loading cover"
+    },
+    {
+      "mins": [
+        640,
+        -384,
+        0
+      ],
+      "maxs": [
+        960,
+        384,
+        160
+      ],
+      "texture": "zi_metal",
+      "label": "loading platform"
+    },
+    {
+      "mins": [
+        720,
+        -416,
+        0
+      ],
+      "maxs": [
+        880,
+        -384,
+        160
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -448,
+        0
+      ],
+      "maxs": [
+        880,
+        -416,
+        144
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -480,
+        0
+      ],
+      "maxs": [
+        880,
+        -448,
+        128
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -512,
+        0
+      ],
+      "maxs": [
+        880,
+        -480,
+        112
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -544,
+        0
+      ],
+      "maxs": [
+        880,
+        -512,
+        96
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -576,
+        0
+      ],
+      "maxs": [
+        880,
+        -544,
+        80
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -608,
+        0
+      ],
+      "maxs": [
+        880,
+        -576,
+        64
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -640,
+        0
+      ],
+      "maxs": [
+        880,
+        -608,
+        48
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -672,
+        0
+      ],
+      "maxs": [
+        880,
+        -640,
+        32
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        -704,
+        0
+      ],
+      "maxs": [
+        880,
+        -672,
+        16
+      ],
+      "texture": "zi_trim",
+      "label": "south loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        384,
+        0
+      ],
+      "maxs": [
+        880,
+        416,
+        160
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        416,
+        0
+      ],
+      "maxs": [
+        880,
+        448,
+        144
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        448,
+        0
+      ],
+      "maxs": [
+        880,
+        480,
+        128
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        480,
+        0
+      ],
+      "maxs": [
+        880,
+        512,
+        112
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        512,
+        0
+      ],
+      "maxs": [
+        880,
+        544,
+        96
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        544,
+        0
+      ],
+      "maxs": [
+        880,
+        576,
+        80
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        576,
+        0
+      ],
+      "maxs": [
+        880,
+        608,
+        64
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        608,
+        0
+      ],
+      "maxs": [
+        880,
+        640,
+        48
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        640,
+        0
+      ],
+      "maxs": [
+        880,
+        672,
+        32
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        720,
+        672,
+        0
+      ],
+      "maxs": [
+        880,
+        704,
+        16
+      ],
+      "texture": "zi_trim",
+      "label": "north loading stairs"
+    },
+    {
+      "mins": [
+        640,
+        -288,
+        160
+      ],
+      "maxs": [
+        688,
+        -256,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        912,
+        -288,
+        160
+      ],
+      "maxs": [
+        960,
+        -256,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        640,
+        256,
+        160
+      ],
+      "maxs": [
+        688,
+        288,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        912,
+        256,
+        160
+      ],
+      "maxs": [
+        960,
+        288,
+        216
+      ],
+      "texture": "zi_caution",
+      "label": "platform shield"
+    },
+    {
+      "mins": [
+        704,
+        -64,
+        160
+      ],
+      "maxs": [
+        896,
+        -32,
+        208
+      ],
+      "texture": "zi_crate",
+      "label": "loading cover"
+    },
+    {
+      "mins": [
+        -640,
+        -80,
+        144
+      ],
+      "maxs": [
+        640,
+        80,
+        160
+      ],
+      "texture": "zi_trim",
+      "label": "cross-warehouse catwalk"
+    },
+    {
+      "mins": [
+        -512,
+        -80,
+        0
+      ],
+      "maxs": [
+        -480,
+        -48,
+        144
+      ],
+      "texture": "zi_metal",
+      "label": "catwalk support"
+    },
+    {
+      "mins": [
+        -512,
+        48,
+        0
+      ],
+      "maxs": [
+        -480,
+        80,
+        144
+      ],
+      "texture": "zi_metal",
+      "label": "catwalk support"
+    },
+    {
+      "mins": [
+        480,
+        -80,
+        0
+      ],
+      "maxs": [
+        512,
+        -48,
+        144
+      ],
+      "texture": "zi_metal",
+      "label": "catwalk support"
+    },
+    {
+      "mins": [
+        480,
+        48,
+        0
+      ],
+      "maxs": [
+        512,
+        80,
+        144
+      ],
+      "texture": "zi_metal",
+      "label": "catwalk support"
+    },
+    {
+      "mins": [
+        -512,
+        -80,
+        160
+      ],
+      "maxs": [
+        -384,
+        -64,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        -128,
+        -80,
+        160
+      ],
+      "maxs": [
+        0,
+        -64,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        256,
+        -80,
+        160
+      ],
+      "maxs": [
+        384,
+        -64,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        -512,
+        64,
+        160
+      ],
+      "maxs": [
+        -384,
+        80,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        -128,
+        64,
+        160
+      ],
+      "maxs": [
+        0,
+        80,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        256,
+        64,
+        160
+      ],
+      "maxs": [
+        384,
+        80,
+        192
+      ],
+      "texture": "zi_caution",
+      "label": "broken catwalk rail"
+    },
+    {
+      "mins": [
+        -464.0,
+        -560.0,
+        0
+      ],
+      "maxs": [
+        -304.0,
+        -400.0,
+        96
+      ],
+      "texture": "zi_crate",
+      "label": "sightline cover"
+    },
+    {
+      "mins": [
+        -512.0,
+        -528,
+        0
+      ],
+      "maxs": [
+        -464.0,
+        -432,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "west crate step"
+    },
+    {
+      "mins": [
+        -304.0,
+        -528,
+        0
+      ],
+      "maxs": [
+        -256.0,
+        -432,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "east crate step"
+    },
+    {
+      "mins": [
+        -464.0,
+        400.0,
+        0
+      ],
+      "maxs": [
+        -304.0,
+        560.0,
+        96
+      ],
+      "texture": "zi_crate",
+      "label": "sightline cover"
+    },
+    {
+      "mins": [
+        -512.0,
+        432,
+        0
+      ],
+      "maxs": [
+        -464.0,
+        528,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "west crate step"
+    },
+    {
+      "mins": [
+        -304.0,
+        432,
+        0
+      ],
+      "maxs": [
+        -256.0,
+        528,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "east crate step"
+    },
+    {
+      "mins": [
+        304.0,
+        -560.0,
+        0
+      ],
+      "maxs": [
+        464.0,
+        -400.0,
+        96
+      ],
+      "texture": "zi_crate",
+      "label": "sightline cover"
+    },
+    {
+      "mins": [
+        256.0,
+        -528,
+        0
+      ],
+      "maxs": [
+        304.0,
+        -432,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "west crate step"
+    },
+    {
+      "mins": [
+        464.0,
+        -528,
+        0
+      ],
+      "maxs": [
+        512.0,
+        -432,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "east crate step"
+    },
+    {
+      "mins": [
+        304.0,
+        400.0,
+        0
+      ],
+      "maxs": [
+        464.0,
+        560.0,
+        96
+      ],
+      "texture": "zi_crate",
+      "label": "sightline cover"
+    },
+    {
+      "mins": [
+        256.0,
+        432,
+        0
+      ],
+      "maxs": [
+        304.0,
+        528,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "west crate step"
+    },
+    {
+      "mins": [
+        464.0,
+        432,
+        0
+      ],
+      "maxs": [
+        512.0,
+        528,
+        48
+      ],
+      "texture": "zi_crate",
+      "label": "east crate step"
+    },
+    {
+      "mins": [
+        -1152,
+        -672,
+        0
+      ],
+      "maxs": [
+        -1120,
+        -608,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        -1152,
+        -32,
+        0
+      ],
+      "maxs": [
+        -1120,
+        32,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        -1152,
+        608,
+        0
+      ],
+      "maxs": [
+        -1120,
+        672,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        -1152,
+        -960,
+        384
+      ],
+      "maxs": [
+        -1120,
+        960,
+        416
+      ],
+      "texture": "zi_trim",
+      "label": "warehouse beam"
+    },
+    {
+      "mins": [
+        1120,
+        -672,
+        0
+      ],
+      "maxs": [
+        1152,
+        -608,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        1120,
+        -32,
+        0
+      ],
+      "maxs": [
+        1152,
+        32,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        1120,
+        608,
+        0
+      ],
+      "maxs": [
+        1152,
+        672,
+        384
+      ],
+      "texture": "zi_metal",
+      "label": "warehouse column"
+    },
+    {
+      "mins": [
+        1120,
+        -960,
+        384
+      ],
+      "maxs": [
+        1152,
+        960,
+        416
+      ],
+      "texture": "zi_trim",
+      "label": "warehouse beam"
+    }
+  ],
+  "entities": [
+    {
+      "classname": "info_player_start",
+      "origin": "-336 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-240 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-144 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-48 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "48 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "144 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "240 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "336 832 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-336 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-240 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-144 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-48 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "48 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "144 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "240 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "336 928 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-336 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-240 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-144 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-48 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "48 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "144 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "240 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "336 1024 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-336 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-240 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-144 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "-48 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "48 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "144 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "240 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_start",
+      "origin": "336 1120 40",
+      "angle": "270"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-336 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-240 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-144 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-48 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "48 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "144 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "240 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "336 -832 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-336 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-240 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-144 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-48 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "48 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "144 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "240 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "336 -928 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-336 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-240 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-144 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-48 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "48 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "144 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "240 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "336 -1024 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-336 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-240 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-144 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "-48 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "48 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "144 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "240 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "info_player_deathmatch",
+      "origin": "336 -1120 40",
+      "angle": "90"
+    },
+    {
+      "classname": "light",
+      "origin": "-960 -960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-960 -480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-960 0 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-960 480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-960 960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-480 -960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-480 -480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-480 0 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-480 480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "-480 960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "0 -960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "0 -480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "0 0 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "0 480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "0 960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "480 -960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "480 -480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "480 0 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "480 480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "480 960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "960 -960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "960 -480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "960 0 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "960 480 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    },
+    {
+      "classname": "light",
+      "origin": "960 960 416",
+      "light": "650",
+      "_color": "1 0.95 0.86"
+    }
+  ],
+  "defense_positions": [
+    {
+      "name": "west loading platform",
+      "floor_z": 160,
+      "approaches": [
+        "south loading stairs",
+        "north loading stairs",
+        "east catwalk"
+      ]
+    },
+    {
+      "name": "east loading platform",
+      "floor_z": 160,
+      "approaches": [
+        "south loading stairs",
+        "north loading stairs",
+        "west catwalk"
+      ]
+    },
+    {
+      "name": "catwalk",
+      "floor_z": 160,
+      "approaches": [
+        "west loading platform",
+        "east loading platform"
+      ]
+    }
+  ]
+}

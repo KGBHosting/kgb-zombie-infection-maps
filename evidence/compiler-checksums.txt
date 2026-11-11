@@ -1,0 +1,4 @@
+9f1fff5b76b227983374bd1c38962eda2baff38a40cc316b2884be459cc35209  /opt/build/qbsp/qbsp
+ae5751b2fc943a61ca3a0ff8e3561b3f95f0b8d95cfbb8b34e0d361c933ac08b  /opt/build/vis/vis
+9ef976e06604402f189967c18a10bc78299fca651a96862cc1039ad0ea3b041c  /opt/build/light/light
+2646a1d31dc4d17f5776fae2bc459f4d3a815e4d740f9db391d0178e1912cdbe  /opt/build/bsputil/bsputil
