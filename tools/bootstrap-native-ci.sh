@@ -2,7 +2,7 @@
 # Hosted Linux CI only: no apt dependency or prebuilt compiler executable.
 set -eu
 cd "$(dirname "$0")/.."
-for tool in cmake ninja c++ git python3 sudo unshare; do command -v "$tool" >/dev/null; done
+for tool in cmake ninja c++ git python3 sudo unshare setpriv; do command -v "$tool" >/dev/null; done
 FETCH_ONLY=1 sh tools/bootstrap.sh
 root=$(pwd)
 deps="$root/.cache/native-deps"
@@ -10,8 +10,10 @@ mkdir -p "$deps/embree" "$deps/tbb"
 tar -xzf .cache/embree-4.4.0.x86_64.linux.tar.gz -C "$deps/embree"
 tar -xzf .cache/oneapi-tbb-2021.11.0-lin.tgz -C "$deps/tbb" --strip-components=1
 # An empty network namespace also covers configure, not only map compilation.
-sudo unshare --net -- cmake -S .cache/ericw-tools -B .cache/native-build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_PREFIX_PATH=$deps/embree;$deps/tbb" -DDISABLE_TESTS=ON -DDISABLE_DOCS=ON -DENABLE_LIGHTPREVIEW=OFF
-sudo unshare --net -- cmake --build .cache/native-build --target qbsp vis light bsputil -j 4
+# Drop back to the invoking CI uid before touching sources or running compiler code.
+offline() { sudo unshare --net -- setpriv --reuid="$(id -u)" --regid="$(id -g)" --init-groups "$@"; }
+offline cmake -S .cache/ericw-tools -B .cache/native-build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_PREFIX_PATH=$deps/embree;$deps/tbb" -DDISABLE_TESTS=ON -DDISABLE_DOCS=ON -DENABLE_LIGHTPREVIEW=OFF
+offline cmake --build .cache/native-build --target qbsp vis light bsputil -j 4
 python3 - <<'RECORD'
 import hashlib,json,subprocess
 from pathlib import Path
