@@ -32,5 +32,12 @@ for dependency in json.loads(Path('tools/toolchain.json').read_text())['dependen
     archive=Path('.cache')/dependency['url'].rsplit('/',1)[1]
     assert hashlib.sha256(archive.read_bytes()).hexdigest()==dependency['sha256'],dependency['name']
 CHECKSUMS
+# Upstream requires this FetchContent source even with DISABLE_TESTS=ON.
+if [ ! -d .cache/googletest/.git ]; then
+  git clone --filter=blob:none --branch v1.14.0 --depth 1 https://github.com/google/googletest.git .cache/googletest
+fi
+test "$(git -C .cache/googletest rev-parse HEAD)" = f8d7d77c06936315286eb55f8de22cd23c188571
+git -C .cache/googletest diff --quiet
+git -C .cache/googletest diff --cached --quiet
 if [ "${FETCH_ONLY:-0}" = 1 ]; then exit 0; fi
 docker build --platform linux/amd64 -f tools/Dockerfile -t kgb-zi-map-tools:alpha11 .

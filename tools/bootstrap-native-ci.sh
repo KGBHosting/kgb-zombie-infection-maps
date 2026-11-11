@@ -12,7 +12,7 @@ tar -xzf .cache/oneapi-tbb-2021.11.0-lin.tgz -C "$deps/tbb" --strip-components=1
 # An empty network namespace also covers configure, not only map compilation.
 # Drop back to the invoking CI uid before touching sources or running compiler code.
 offline() { sudo unshare --net -- setpriv --reuid="$(id -u)" --regid="$(id -g)" --init-groups "$@"; }
-offline cmake -S .cache/ericw-tools -B .cache/native-build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_PREFIX_PATH=$deps/embree;$deps/tbb" -DDISABLE_TESTS=ON -DDISABLE_DOCS=ON -DENABLE_LIGHTPREVIEW=OFF
+offline cmake -S .cache/ericw-tools -B .cache/native-build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_PREFIX_PATH=$deps/embree;$deps/tbb" -DDISABLE_TESTS=ON -DDISABLE_DOCS=ON -DENABLE_LIGHTPREVIEW=OFF "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=$root/.cache/googletest" -DFETCHCONTENT_FULLY_DISCONNECTED=ON
 offline cmake --build .cache/native-build --target qbsp vis light bsputil -j 4
 python3 - <<'RECORD'
 import hashlib,json,subprocess

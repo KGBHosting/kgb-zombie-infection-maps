@@ -44,5 +44,17 @@
     "host_tools": "preinstalled CMake/Ninja/C++; exact versions and compiler SHA256 recorded in CI artifact evidence/ci-toolchain.json",
     "offline": "sudo unshare --net for configure, source build and both map compiles",
     "acceptance": "exact frozen runtime ZIP and all four file SHA256/SHA512 required"
-  }
+  },
+  "source_build_dependencies": [
+    {
+      "name": "GoogleTest",
+      "repository": "https://github.com/google/googletest",
+      "tag": "v1.14.0",
+      "commit": "f8d7d77c06936315286eb55f8de22cd23c188571",
+      "license": "BSD-3-Clause",
+      "license_url": "https://github.com/google/googletest/blob/f8d7d77c06936315286eb55f8de22cd23c188571/LICENSE",
+      "license_sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+      "purpose": "Upstream unconditional FetchContent during configure, even when compiler tests disabled. Not shipped in runtime map ZIP."
+    }
+  ]
 }
