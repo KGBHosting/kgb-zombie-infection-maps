@@ -28,5 +28,8 @@ for tool in ('cmake','ninja','c++'):
 for name in ('qbsp','vis','light','bsputil'):
     p=Path('.cache/native-build')/name/name
     record['binaries'][name]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+cpu=Path('/proc/cpuinfo').read_text().split('\n\n',1)[0]
+flags=set(next((line.split(':',1)[1].split() for line in cpu.splitlines() if line.startswith('flags')),[]))
+record['cpu_feature_bools']={key:key in flags for key in ('sse2','sse4_2','avx','avx2','avx512f','fma')}
 Path('evidence/ci-toolchain.json').write_text(json.dumps(record,indent=2)+'\n')
 RECORD

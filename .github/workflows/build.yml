@@ -34,6 +34,9 @@ jobs:
         run: |
           python3 tools/package.py
           python3 tools/verify_release.py
+      - name: Bounded documented ISA diagnostic on release-byte mismatch
+        if: failure() && steps.maps.outcome == 'success'
+        run: sh tools/probe-embree-isa.sh
       - uses: actions/upload-artifact@v7
         if: always() && steps.maps.outcome == 'success'
         with:
@@ -46,4 +49,6 @@ jobs:
             evidence/ci-toolchain.json
             build/candidate/*.bsp
             build/candidate/*.light.log
+            build/isa-probe/**/*.bsp
+            build/isa-probe/**/result.json
           if-no-files-found: error
